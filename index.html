@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Status Generator</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff007f, #ff7f00, #8000ff);
+            background-size: 300% 300%;
+            animation: gradientAnimation 15s ease infinite;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="displayText">Jeb Keitho :D!</h1>
+    <button onclick="randomizeText()">Losuj</button>
+
+    <script>
+        const texts = [
+            "Na vc z Keitho -1000 aury!",
+            "Dziś jest piękny dzień! Jeb Keitho :D!",
+            "Uśmiechnij się, pamiętaj zawsze mogłeś być Keitho'em!",
+            "Jesteś wspaniały, bo nie jesteś Keitho!",
+            "Gdy ci dobrze, gdy ci źle, wyzwij Keitho dwukropek D!",
+            "Jebać Keitho!",
+            "Ciesz się każdą chwilą, bo nie jesteś Keitho!",
+            "Nigdy nie przestawaj marzyć! ~Keitho",
+            "Naukowiec Keitho",
+            "Życie jest piękne! ~Każdy oprócz Keitho",
+            "Dzień Szanowania Keitho?!??!?!?!?!?",
+            "Doceniaj małe rzeczy! ~Keitho",
+            "Uśmiech to najpiękniejszy dodatek, chyba że Keitho",
+            "Masz w sobie wiele siły, nie poddawaj się Keitho",
+            "Dąż do swoich marzeń, kiedyś ktoś cię będzie szanował",
+            "Każdy dzień jest dobry na jebanie Keitho",
+            "Niech moc na jebanie Keitho towarzyszy Ci codziennie!",
+            "Czas na nowe wyzwania Jeb Keitho podwojnie!",
+            "Żyj pełnią życia Jeb Keihto!",
+            "Każdy dzień przynosi nowe możliwości na jebanie Keitho!"
+        ];
+
+        function randomizeText() {
+            const randomIndex = Math.floor(Math.random() * texts.length);
+            document.getElementById('displayText').innerText = texts[randomIndex];
+        }
+    </script>
+</body>
+</html>
